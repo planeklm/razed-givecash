@@ -1,7 +1,7 @@
 fx_version "cerulean"
 game "gta5"
 
-description "Razed Give Cash"
+description "Razed's Give Cash"
 
 author 'planeklm'
 
