@@ -19,8 +19,8 @@ You use your 3rd-eye (qb-target default) to interact with a player to open the U
 [qb-core](https://github.com/qbcore-framework/qb-core)
 
 [qb-target](https://github.com/qbcore-framework/qb-target)\
-[qb-menu](https://github.com/qbcore-framework/qb-menu)
-OR
+[qb-menu](https://github.com/qbcore-framework/qb-menu)\
+OR\
 [ox_target](https://github.com/overextended/ox_target)\
 [ox_lib](https://github.com/overextended/ox_lib)
 
