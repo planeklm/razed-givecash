@@ -1,27 +1,21 @@
-RegisterNetEvent('razed-givecash:server:chargerecipient', function(id, amount)
-    local src = source
-    local payee = QBCore.Functions.GetPlayer(src)
-    local recipient = QBCore.Functions.GetPlayer(tonumber(id))
-    local recipientPed = GetPlayerPed(tonumber(id))
-    local payeePed = GetPlayerPed(src)
-    if not payee or not recipient then return end
-    if not payee.PlayerData.metadata["isdead"] then
-        local checkRangeOfRecip = #(GetEntityCoords(recipientPed) - GetEntityCoords(payeePed))
+local QBCore = exports['qb-core']:GetCoreObject()
 
-        if checkRangeOfRecip < 10.0 then
-            if tonumber(amount) > 0 then
-                if payee.Functions.RemoveMoney('cash', tonumber(amount)) then
-                    recipient.Functions.AddMoney('cash', tonumber(amount))
-                    TriggerClientEvent('ox_lib:notify', src, 'Sent $'..tonumber(amount).." to"..id, 'success')
-                        TriggerClientEvent('ox_lib:notify', id, 'you received $'..tonumber(amount).." in cash from ID: #"..src, 'success')
+RegisterNetEvent('razed-givecash:server:chargerecipient', function(input[1], input[2])
+    local payee = QBCore.Functions.GetPlayer(source)
+    local recipient = QBCore.Functions.GetPlayer(tonumber(input[1]))
+    local recipientPed = GetPlayerPed(tonumber(input[1]))
+    local payeePed = GetPlayerPed(source)
+
+    if not payee or not recipient then return end
+        local checkRangeOfRecip = #(GetEntityCoords(recipientPed) - GetEntityCoords(payeePed))
+        if checkRangeOfRecip < Config.RangeOfRecipient then
+            if tonumber(input[2]) > 0 then
+                if payee.Functions.RemoveMoney('cash', tonumber(input[2])) then
+                    recipient.Functions.AddMoney('cash', tonumber(input[2]))
+                    TriggerClientEvent('ox_lib:notify', source, 'Sent $'..tonumber(input[2]).." to"..input[1], 'success')
+                        TriggerClientEvent('ox_lib:notify', input[1], 'You have been given $'..tonumber(input[2]).., 'success')
                 end
-            else
-                TriggerClientEvent('ox_lib:notify', src, 'Can\'t Send $0', 'error')
-            end
         else
-            TriggerClientEvent('ox_lib:notify', src, 'Too far', 'error')
+            TriggerClientEvent('ox_lib:notify', source, 'Too far from recipient.', 'error')
         end
-    else
-        TriggerClientEvent('ox_lib:notify', src, 'Can\'t Send Money When Dead.', 'error')
-    end
 end)
