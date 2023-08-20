@@ -24,7 +24,7 @@ OR\
 [ox_target](https://github.com/overextended/ox_target)\
 [ox_lib](https://github.com/overextended/ox_lib)
 
-# A big thank you to TonyCapon3 for the idea and his resource to help me create this resource. ❤️
+A big thank you to TonyCapon3 for the idea and his resource to help me create this resource. ❤️
 https://github.com/TonyCapon3/tc-givecash
 
 # Credits
