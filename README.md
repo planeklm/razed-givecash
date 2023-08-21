@@ -16,12 +16,12 @@ You use your 3rd-eye (qb-target default) to interact with a player to open the U
 * In your `server.cfg` add `ensure razed-cashgive`
 
 # Dependencies
-[qb-core](https://github.com/qbcore-framework/qb-core)
+[qb-core](https://github.com/qbcore-framework/qb-core)\
+[ox_lib](https://github.com/overextended/ox_lib)
 
 [qb-target](https://github.com/qbcore-framework/qb-target)\
 OR\
-[ox_target](https://github.com/overextended/ox_target)\
-[ox_lib](https://github.com/overextended/ox_lib)
+[ox_target](https://github.com/overextended/ox_target)
 
 A big thank you to TonyCapon3 for the idea and his resource to help me create this resource. ❤️
 https://github.com/TonyCapon3/tc-givecash
