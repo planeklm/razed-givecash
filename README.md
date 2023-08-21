@@ -7,7 +7,7 @@ You use your 3rd-eye (qb-target default) to interact with a player to open the U
 **Features:**
 
 * Fully Open-Source
-* OX and QB
+* OX lib future proof
 * Customizable
 * Easy to configure
 
