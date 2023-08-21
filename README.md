@@ -4,6 +4,8 @@
 We have created a simple cash give script for qbcore framework which has options for both QB and OX.
 You use your 3rd-eye (qb-target default) to interact with a player to open the UI.
 
+![image-removebg-preview - 2023-08-22T003453 109](https://github.com/planeklm/razed-givecash/assets/91488137/d63585ba-378a-4289-8cff-3b61a5055530)
+
 **Features:**
 
 * Fully Open-Source
