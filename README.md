@@ -4,7 +4,7 @@
 We have created a cash give script for qbcore framework which includes a message system, its just a simple drag and drop.
 You use your 3rd-eye (qb-target default) to interact with a player to open the UI.
 
-![image-removebg-preview - 2023-08-22T003453 109](https://github.com/planeklm/razed-givecash/assets/91488137/d63585ba-378a-4289-8cff-3b61a5055530)
+![image-removebg-preview - 2023-08-22T003453 109](https://github.com/planeklm/razed-givecash/assets/91488137/f50020ce-094c-48e3-987d-e856d28ea1d0)
 
 **Features:**
 
