@@ -13,31 +13,6 @@ local function moneyMenu()
         if not input then return end
              TriggerServerEvent("razed-givecash:server:chargerecipientOX", input[1], input[2], input[3])
     end
-
-if Config.Menu == 'qb' then
-    local inputqb = exports['qb-input']:ShowInput({
-        header = "Money Menu",
-        submitText = "Confirm",
-        inputs = {
-            {
-                type = 'number',
-                isRequired = true,
-                name = 'idrecipient',
-                text = 'ID of recipent'
-            },
-            {
-                type = 'number',
-                isRequired = true,
-                name = 'mular',
-                text = '$ Amount'
-            }
-        }
-    })
-    if inputqb then
-        if not inputqb.id or not inputqb.amount then return end
-        TriggerServerEvent("razed-givecash:server:chargerecipientQB", inputqb.id, inputqb.amount)
-        end
-    end
 end
 
 CreateThread(function()
@@ -54,18 +29,6 @@ CreateThread(function()
             },
             distance = Config.TargetDistance
         })
-    --[[exports['qb-target']:AddTargetModel(TestTarget, {
-        options = {
-        {
-            action = function()
-                moneyMenu()
-            end,
-            icon = "fas fa-money",
-            label = "Give Recipient Cash",
-        }
-      },
-      distance = 3.0,
-    })]]--
 else if Config.Target == 'ox' then
     exports.ox_target:addGlobalPlayer({
         options = {
@@ -80,6 +43,5 @@ else if Config.Target == 'ox' then
         distance = 3.0
     })
     end
-end
+  end
 end)
-
