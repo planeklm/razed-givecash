@@ -27,7 +27,7 @@ CreateThread(function()
                     label = "Give Recipient Cash",
                 },
             },
-            distance = Config.TargetDistance
+            distance = 3.0
         })
 else if Config.Target == 'ox' then
     exports.ox_target:addGlobalPlayer({
