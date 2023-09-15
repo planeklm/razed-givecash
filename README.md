@@ -30,4 +30,4 @@ A big thank you to TonyCapon3 for the idea and his resource to help me create th
 https://github.com/TonyCapon3/tc-givecash
 
 # Credits
-planeklm - Coding, etc\
+[planeklm (KLM)](https://github.com/planeklm)
